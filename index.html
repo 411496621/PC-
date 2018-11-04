@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/* css reset 开始*/
+			html,body{height: 100%;overflow: hidden;}
+			#wrap{height:100%;}
+			html,body,h1,h2,h3,h4,h5,h6,p,ul,li{margin: 0px;padding: 0px;font: 14px "微软雅黑";}
+			a{text-decoration: none;display: block;}
+			li{list-style: none;}
+			img{display: block;}
+	        /* css reset 结束 */
+	       
+	       /* common css 开始*/
+	      
+	        .clearfix:after{content:"";display:block;clear:both;}
+	        .clearfix:{zoom:1;}
+	        .commonTitle{ color:#009ee0; font-size:80px; line-height:0.8;font-weight:bold; letter-spacing:-5px;}
+	        .commonText{ color:white; line-height:1.5; font-size:15px;}
+	       /* common css 结束 */ 
+	       
+	       /*头部布局开始*/
+	        #head>.headMain{width:1100px;height:80px;margin:0 auto;position:relative;}
+	        #head>.headMain>.logo{float:left;margin-top:30px;}
+	        #head>.headMain>.nav{float:right;margin-top:50px;}
+	        #head>.headMain>.nav>.list>li{float:left;margin-left:40px;position:relative;}
+	        #head>.headMain>.nav>.list>li .up{position:absolute;left:0;top:0;color:black;width:0;overflow:hidden;
+	        transition:width 1s; }
+	        #head>.headMain>.nav>.list>li:hover .up{width:100%;}
+	        #head>.headMain>.arrow{position:absolute;bottom:-11px;left:50%; width:21px;height:11px;
+	        background:url(img/menuIndicator.png); transition:left 1s; z-index:2;}
+	       /*头部布局结束*/
+	        
+	       /*内容区布局开始*/
+	       #content{background:gray;position:relative;overflow:hidden;}
+	       #content>.list{position:absolute;top:0;transition:top 1s;}
+	       #content>.list>li{position:relative;}
+	       
+	       #content>.list>li:nth-of-type(1){background:url(img/bg1.jpg) no-repeat; background-position:50% 50%;}
+	       #content>.list>li:nth-of-type(2){background:url(img/bg2.jpg) no-repeat; background-position:50% 50%;}
+	       #content>.list>li:nth-of-type(3){background:url(img/bg4.jpg) no-repeat; background-position:50% 50%;}
+	       #content>.list>li:nth-of-type(4){background:url(img/bg3.jpg) no-repeat; background-position:50% 50%;}
+	       #content>.list>li:nth-of-type(5){background:url(img/bg5.jpg) no-repeat; background-position:50% 50%;}
+	       
+	       #content>.list>li>section{width:1100px;height:520px;position:absolute;
+	       left:0;top:0;right:0;bottom:0;margin:auto;}
+	      
+	       /*内容区第三屏 开始*/
+	       #content>.list>li:nth-of-type(3){}
+	       #content>.list>li:nth-of-type(3)>.works>.works1{margin:50px 0px 100px 50px;position:relative;z-index:2;}
+	       #content>.list>li:nth-of-type(3)>.works>.works2{position:relative;z-index:2;}
+	       #content>.list>li:nth-of-type(3)>.works>.works2>.list{margin-left:50px;}
+	       #content>.list>li:nth-of-type(3)>.works>.works2>.list>li{float:left;width:220px;height:133px;margin:0 1px;position:relative;overflow:hidden;}
+	       #content>.list>li:nth-of-type(3)>.works>.works2>.list>li:nth-of-type(4){width:332px;height:133px;}
+	       #content>.list>li:nth-of-type(3)>.works>.works2>.list>li>img{transition:transform 1s;}
+	       #content>.list>li:nth-of-type(3)>.works>.works2>.list>li>.mask{position:absolute;left:0;right:0;top:0;bottom:0;
+	       background:rgba(25,25,25,0.8);color:white;padding:15px;opacity:0;transition:opacity 1s;}
+	       #content>.list>li:nth-of-type(3)>.works>.works2>.list>li>.mask>p{margin-bottom:10px;}
+	       #content>.list>li:nth-of-type(3)>.works>.works2>.list>li>.mask>.icon{display:inline-block;width:32px;height:34px;
+	       background:url(img/zoomico.png);position:absolute;left:0;right:0;margin:auto;transition:background-position 1s;}
+	       
+	       #content>.list>li:nth-of-type(3)>.works>.works2>.list>li:hover>.mask{opacity:1;}
+	       #content>.list>li:nth-of-type(3)>.works>.works2>.list>li:hover>img{transform:scale(1.5) rotate(30deg);} 
+	       #content>.list>li:nth-of-type(3)>.works>.works2>.list>li>.mask>.icon:hover{background-position:0 -36px;} 
+	       
+	       #content>.list>li:nth-of-type(3)>.works>.robot{position:absolute;z-index:2;width:167px;height:191px;left:900px;top:170px;
+	       animation:rtmove 5s linear infinite;}
+	       @keyframes rtmove{
+	       	0%{transform:translateX(0px) rotateY(0deg);}
+	       	49.5%{transform:translateX(-500px) rotateY(0deg);}
+	       	50%{transform:  translateX(-500px) rotateY(180deg);}
+	       	100%{transform:translateX(0px) rotateY(180deg);}
+	       }
+	       /*内容区第三屏 结束*/
+	      
+	       /*内容区第二屏 开始*/
+	      #content>.list>li:nth-of-type(2){overflow:hidden;}
+	       #content>.list>li:nth-of-type(2)>.course>.course1{margin:50px;position:relative;z-index:2;}
+	       #content>.list>li:nth-of-type(2)>.course>.course2{width:400px;margin-left:50px;position:relative;z-index:2;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3{width:480px;position:absolute;right:50px;top:70px;z-index:2;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>div{width:9px;height:410px;background:url(img/plus_row.png) no-repeat;position:absolute;top:-7px;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>div:nth-of-type(1){left:-5px;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>div:nth-of-type(2){left:115px;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>div:nth-of-type(3){left:235px;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>div:nth-of-type(4){left:355px;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>div:nth-of-type(5){left:475px;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li{width:120px;height:132px;float:left;position:relative;perspective:1000px;transform-style:preserve-3d;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li>.face,
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li>.backface{position:absolute;left:0;top:0;right:0;bottom:0;padding:15px;transition:transform 1s;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li>.face{background:#009ee0;transform:rotateY(180deg);backface-visibility:hidden;color:white;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li>.backface{background-position:50% 50% !important;}
+	       
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:nth-of-type(1)>.backface{background:url(img/apcoa.png) no-repeat;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:nth-of-type(2)>.backface{background:url(img/binoli.png) no-repeat;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:nth-of-type(3)>.backface{background:url(img/bks.png) no-repeat;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:nth-of-type(4)>.backface{background:url(img/gu.png) no-repeat;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:nth-of-type(5)>.backface{background:url(img/hlx.png) no-repeat;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:nth-of-type(6)>.backface{background:url(img/lbs.png) no-repeat;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:nth-of-type(7)>.backface{background:url(img/leonberg.png) no-repeat;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:nth-of-type(8)>.backface{background:url(img/pcwelt.png) no-repeat;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:nth-of-type(9)>.backface{background:url(img/tata.png) no-repeat;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:nth-of-type(10)>.backface{background:url(img/apcoa.png) no-repeat;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:nth-of-type(11)>.backface{background:url(img/binoli.png) no-repeat;}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:nth-of-type(12)>.backface{background:url(img/bks.png) no-repeat;}
+	       
+	       
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:hover>.face{transform:rotateY(360deg);}
+	       #content>.list>li:nth-of-type(2)>.course>.course3>.list>li:hover>.backface{transform:rotateY(180deg);}
+	       /*内容区第二屏 结束*/
+	            
+	       /*内容区 第一屏开始*/
+	       #content>.list>li:nth-of-type(1)>.home>.home1{position:absolute;left:0;top:0;right:0;bottom:0;perspective:1000px;transform-style:preserve-3d;}
+	       #content>.list>li:nth-of-type(1)>.home>.home1>.item{position:absolute;left:0;top:0;right:0;bottom:0;text-align:center;color:white;visibility:hidden;}
+	       #content>.list>li:nth-of-type(1)>.home>.home1>.item>span{display:block; margin-top:200px;}
+	       
+	       #content>.list>li:nth-of-type(1)>.home>.home2{position:absolute;width:100%;bottom:0;text-align:center;}
+	       #content>.list>li:nth-of-type(1)>.home>.home2>span{display:inline-block;width:20px;height:20px;border-radius:50%; 
+	       background:rgba(255,255,255,0.5);box-shadow:0 0 4px rgba(25,25,25,0.8);cursor:pointer;}
+	                  
+	       #content>.list>li:nth-of-type(1)>.home>.home1>.item:nth-of-type(1){background:#dc6c5f;}
+	       #content>.list>li:nth-of-type(1)>.home>.home1>.item:nth-of-type(2){background:#95dc84;}
+	       #content>.list>li:nth-of-type(1)>.home>.home1>.item:nth-of-type(3){background:#64b9d2;}
+	       #content>.list>li:nth-of-type(1)>.home>.home1>.item:nth-of-type(4){background:#000000;} 
+	       
+	       #content>.list>li:nth-of-type(1)>.home>.home2>span.active{background:white;cursor:default;}	  
+	       #content>.list>li:nth-of-type(1)>.home>.home1>.item.active{visibility:visible;}
+	       
+	          /*3d 轮播动画 从左往右的时候 */
+	          #content>.list>li:nth-of-type(1)>.home>.home1>.item.leftHide{visibility:hidden;   animation:leftHide 1s linear ;}
+	          #content>.list>li:nth-of-type(1)>.home>.home1>.item.rightShow{visibility:visible; animation:rightShow 1s linear ;}
+	           @keyframes leftHide{
+	              0%{visibility:visible;}
+	              50%{transform:translateX(-40%) rotateY(30deg) scale(0.8);}
+	              100%{transform:translateZ(-200px);}
+	          }
+	          @keyframes rightShow{
+	              0%{visibility:hidden;transform:translateZ(-200px);}
+	              50%{transform:translateX(40%) rotateY(-30deg) scale(0.8);}
+	              100%{}
+	          }
+	          /*3d 轮播动画 从右往左的时候 */
+	          #content>.list>li:nth-of-type(1)>.home>.home1>.item.rightHide{visibility:hidden;   animation:rightHide 1s linear ;}
+	          #content>.list>li:nth-of-type(1)>.home>.home1>.item.leftShow{visibility:visible; animation:leftShow 1s linear ;}
+	           @keyframes rightHide{
+	              0%{visibility:visible;}
+	              50%{transform:translateX(40%) rotateY(-30deg) scale(0.8);}
+	              100%{transform:translateZ(-200px);}
+	          }
+	          @keyframes leftShow{
+	              0%{visibility:hidden;transform:translateZ(-200px);}
+	              50%{transform:translateX(-40%) rotateY( 30deg) scale(0.8);}
+	              100%{}
+	          }
+	       /*内容区 第一屏结束*/
+	            
+	       /*内容区   第四屏开始*/
+	       #content>.list>li:nth-of-type(4){overflow:hidden;}
+	       #content>.list>li:nth-of-type(4)>.about>.about1{margin:50px 0 100px 50px;}
+	       #content>.list>li:nth-of-type(4)>.about>.about2{width:400px;margin-left:50px;}
+	       #content>.list>li:nth-of-type(4)>.about>.about3{}
+	       #content>.list>li:nth-of-type(4)>.about>.about3>.item{width:260px;height:200px;border:5px solid rgba(255,255,255,0.5);
+	       border-radius:8px;overflow:hidden;position:absolute;z-index:2; }
+	       #content>.list>li:nth-of-type(4)>.about>.about3>.item:nth-of-type(1){left:750px; top:50px;}
+	       #content>.list>li:nth-of-type(4)>.about>.about3>.item:nth-of-type(2){left:600px; top:290px}              
+	       #content>.list>li:nth-of-type(4)>.about>.line{width:357px;height:998px;background:url(img/greenLine.png) no-repeat;position:absolute;
+	       right:200px;top:-50px;}
+	       #content>.list>li:nth-of-type(4)>.about>.about3>.item>ul{position:absolute;left:0;top:0;right:0;bottom:0;}
+	       #content>.list>li:nth-of-type(4)>.about>.about3>.item>ul>li{float:left;overflow:hidden;position:relative;} 
+	       #content>.list>li:nth-of-type(4)>.about>.about3>.item>ul>li>img{transition:1s left,1s top;}      
+	       #content>.list>li:nth-of-type(4)>.about>.about3>.item:nth-of-type(1)>span{display:block;width:100%;height:100%;
+	       background:url(img/about2.jpg) no-repeat;transition:1s transform;transform:scale(1.5);}
+	       #content>.list>li:nth-of-type(4)>.about>.about3>.item:nth-of-type(2)>span{display:block;width:100%;height:100%;
+	       background:url(img/about4.jpg) no-repeat;transition:1s transform;transform:scale(1.5);}
+	       
+	       #content>.list>li:nth-of-type(4)>.about>.about3>.item:hover>span{transform:scale(1);}
+	       /*内容区   第四屏结束*/
+	      
+	       /*內容區    第五屏開始 */
+	      
+	       #content>.list>li:nth-of-type(5)>.team>.team1{margin:50px;width:400px;float:left;}
+	       #content>.list>li:nth-of-type(5)>.team>.team2{margin:50px;width:400px;float:right;}
+	       #content>.list>li:nth-of-type(5)>.team>.team3{width:944px;height:448px;position:absolute;left:50%;margin-left:-472px;top:250px;}
+	       #content>.list>li:nth-of-type(5)>.team>.team3>ul>li{width:118px;height:448px;background:url(img/team.png) no-repeat;float:left;
+	         transition:opacity 1s;
+	       }    
+	       #content>.list>li:nth-of-type(5)>.team>.team3>ul>li:nth-child(1){background-position:0px;}
+	       #content>.list>li:nth-of-type(5)>.team>.team3>ul>li:nth-child(2){background-position:-118px;}
+	       #content>.list>li:nth-of-type(5)>.team>.team3>ul>li:nth-child(3){background-position:-236px;}
+	       #content>.list>li:nth-of-type(5)>.team>.team3>ul>li:nth-child(4){background-position:-354px;}
+	       #content>.list>li:nth-of-type(5)>.team>.team3>ul>li:nth-child(5){background-position:-472px;}
+	       #content>.list>li:nth-of-type(5)>.team>.team3>ul>li:nth-child(6){background-position:-590px;}
+	       #content>.list>li:nth-of-type(5)>.team>.team3>ul>li:nth-child(7){background-position:-708px;}
+	       #content>.list>li:nth-of-type(5)>.team>.team3>ul>li:nth-child(8){background-position:-826px;}
+	       
+	       
+	       /*內容區    第五屏結束*/
+	      
+	       /*滚轮样式*/
+	       .fixed{position:fixed;right:10px;top:45%;}
+	       .fixed>span{display:block;width:15px;height:15px;border:2px solid white;margin-bottom:10px;border-radius:50%;cursor:pointer;}
+	       .fixed>span.active{background:white;cursor:default;}
+	       /*内容区布局结束*/ 
+	       
+	       /*出入场动画*/
+	      
+	       #content>.list>li:nth-of-type(1)>.home>.home1{transition:1s transform,1s opacity;}
+	       #content>.list>li:nth-of-type(1)>.home>.home2{transition:1s transform,1s opacity;}
+	       #content>.list>li:nth-of-type(2)>.course .plane1{ width:359px; height:283px; background:url(img/plane1.png) no-repeat; position:absolute; left:300px; top:-100px; transition:1s;}
+	       #content>.list>li:nth-of-type(2)>.course .plane2{ width:309px; height:249px; background:url(img/plane2.png) no-repeat; position:absolute; left:-100px; top:200px; transition:1s;}
+	       #content>.list>li:nth-of-type(2)>.course .plane3{ width:230px; height:182px; background:url(img/plane3.png) no-repeat; position:absolute; left:300px; top:400px; transition:1s;}
+	       
+	       #content>.list>li:nth-of-type(3){overflow:hidden;}
+	       #content>.list>li:nth-of-type(3)>.works .pencel1{ width:180px; height:97px; background:url(img/pencel1.png) no-repeat; position:absolute; transition:1s; left:500px; top:0;}
+		   #content>.list>li:nth-of-type(3)>.works .pencel2{ width:268px; height:38px; background:url(img/pencel2.png) no-repeat; position:absolute; transition:1s; left:300px; top:250px;}
+	       #content>.list>li:nth-of-type(3)>.works .pencel3{ width:441px; height:231px; background:url(img/pencel3.png) no-repeat; position:absolute; transition:1s; left:650px; top:300px;}
+	       
+	       #content>.list>li:nth-of-type(4)>.about>.about3>.item{transition:1s transform;}
+	       #content>.list>li:nth-of-type(5)>.team>.team1,#content>.list>li:nth-of-type(5)>.team>.team2{transition:1s transform;}
+	       
+	       /*音频*/
+	       #head>.headMain>.music{width:14px;height:14px;background:url(img/musicon.gif) no-repeat;
+	       float:left;margin:50px 0 0 5px;cursor:pointer;}
+	       
+	       /*开机动画*/
+	       #wrap  #mask{position:absolute;width:100%;height:100%;left:0;
+	       top:0;z-index:20;}
+	       #wrap  #mask>.up{height:50%;background:deepskyblue;transition:1s  height ;}
+	       #wrap  #mask>.down{width:100%; height:50%;background:deepskyblue;transition:1s height;position:absolute;bottom:0;}
+	       #wrap  #mask>.middle{height:5px;width:0;position:absolute;background:white;
+	       top:50%;margin-top:-2.5px;transition:1s width;}
+		</style>
+	</head>
+	<body>
+		 <setcion id="wrap">	 	 
+		 	 <div id="mask">
+		 	 	  <div class="up"></div>
+		 	 	  <div class="down"></div>
+		 	 	  <div class="middle"></div>
+		 	 </div>
+		 	 
+		 	 <header id="head">
+		 	 	  <section class="headMain">
+		 	 	  	 <h1 class="logo">
+		 	 	  	 	  <img src="img/logo.png" alt="" />
+		 	 	  	 </h1>
+		 	 	  	 <nav class="nav">
+		 	 	  	 	   <ul class="list clearfix">
+		 	 	  	 	   	   <li class="home">
+		 	 	  	 	   	   	  <a href="javascript:;">
+		 	 	  	 	   	   	  	   <div class="up">
+		 	 	  	 	   	   	  	   	   <img src="img/home_gruen.png" alt="" />
+		 	 	  	 	   	   	  	   </div>
+		 	 	  	 	   	   	  	   <div class="down">
+		 	 	  	 	   	   	  	   	   <img src="img/home.png" alt="" />
+		 	 	  	 	   	   	  	   </div>
+		 	 	  	 	   	   	  </a>
+		 	 	  	 	   	   </li>
+		 	 	  	 	   	   <li class="course">
+		 	 	  	 	   	   	  <a href="javascript:;">
+		 	 	  	 	   	   	  	   <div class="up">
+		 	 	  	 	   	   	  	       Course
+		 	 	  	 	   	   	  	   </div>
+		 	 	  	 	   	   	  	   <div class="down">
+		 	 	  	 	   	   	  	   	   Course
+		 	 	  	 	   	   	  	   </div>
+		 	 	  	 	   	   	  </a> 
+		 	 	  	 	   	   </li>
+		 	 	  	 	   	   <li class="works">
+		 	 	  	 	   	   	  <a href="javascript:;">
+		 	 	  	 	   	   	  	   <div class="up">
+		 	 	  	 	   	   	  	       Works
+		 	 	  	 	   	   	  	   </div>
+		 	 	  	 	   	   	  	   <div class="down">
+		 	 	  	 	   	   	  	   	   Works
+		 	 	  	 	   	   	  	   </div>
+		 	 	  	 	   	   	  </a> 
+		 	 	  	 	   	   </li>
+		 	 	  	 	   	   <li class="about">
+		 	 	  	 	   	   	  <a href="javascript:;">
+		 	 	  	 	   	   	  	   <div class="up">
+		 	 	  	 	   	   	  	       About
+		 	 	  	 	   	   	  	   </div>
+		 	 	  	 	   	   	  	   <div class="down">
+		 	 	  	 	   	   	  	   	   About
+		 	 	  	 	   	   	  	   </div>
+		 	 	  	 	   	   	  </a> 
+		 	 	  	 	   	   </li>
+		 	 	  	 	   	   <li class="team">
+		 	 	  	 	   	   	  <a href="javascript:;">
+		 	 	  	 	   	   	  	   <div class="up">
+		 	 	  	 	   	   	  	       Team
+		 	 	  	 	   	   	  	   </div>
+		 	 	  	 	   	   	  	   <div class="down">
+		 	 	  	 	   	   	  	   	   Team
+		 	 	  	 	   	   	  	   </div>
+		 	 	  	 	   	   	  </a> 
+		 	 	  	 	   	   </li>
+		 	 	  	 	   	   
+		 	 	  	 	  
+		 	 	  	 	   </ul>
+		 	 	  	 </nav>
+		 	 	     <div class="arrow"></div>
+		 	 	     <div class="music">
+		 	 	     	   <audio src="img/audio.mp3" ></audio>
+		 	 	     </div>
+		 	 	  </section>
+		 	 </header>
+		 	 <section id="content">
+		 	 	  <ul class="list">
+		 	 	  	 <li>
+		 	 	  	 	 <section class="home">
+		 	 	  	 	 	   <div class="home1 commonTitle">
+		 	 	  	 	 	   	    <div class="item active">
+		 	 	  	 	 	   	    	<span>one layer</span>
+		 	 	  	 	 	   	    </div>
+		 	 	  	 	 	   	    <div class="item ">
+		 	 	  	 	 	   	    	<span>two layer</span>
+		 	 	  	 	 	   	    </div>
+		 	 	  	 	 	   	    <div class="item">
+		 	 	  	 	 	   	    	<span>three layer</span>
+		 	 	  	 	 	   	    </div>
+		 	 	  	 	 	   	    <div class="item">
+		 	 	  	 	 	   	    	<span>four layer</span>
+		 	 	  	 	 	   	    </div>
+		 	 	  	 	 	   </div>
+		 	 	  	 	 	   <div class="home2">
+		 	 	  	 	 	   	    <span class="active"></span>
+		 	 	  	 	 	   	    <span></span>
+		 	 	  	 	 	   	    <span></span>
+		 	 	  	 	 	   	    <span></span>
+		 	 	  	 	 	   </div>
+		 	 	  	 	 </section>
+		 	 	  	 </li>
+		 	 	  	 <li>
+		 	 	  	 	<section class="course">
+		 	 	  	 		  <div class="course1 commonTitle">
+		 	 	  	 		  	EINIGE <br />
+								UNSERER <br />
+								KUNDEN  <br />
+		 	 	  	 		  </div>
+		 	 	  	 		  <div class="course2 commonText">
+		 	 	  	 		  	  <p>Das Kundenvertrauen in unsere Kompetenz ist die notwendige Basis einer erfolgreichen Zusammenarbeit, gleichzeitig aber auch das größte Lob, das man uns entgegenbringen kann. </p>
+		 	 	  	 		  	  <p>Diese und viele weitere große und kleine Kunden vertrauen uns seit Jahren, was uns stolz macht, und dafür sagen wir an dieser Stelle einfach mal.</p>
+		 	 	  	 		  </div>
+		 	 	  	 		  <div class="course3">
+		 	 	  	 		  	    <div></div>
+		 	 	  	 		  	    <div></div>
+		 	 	  	 		  	    <div></div>
+		 	 	  	 		  	    <div></div>
+		 	 	  	 		  	    <div></div>
+		 	 	  	 		  	    <ul class="list clearfix">
+		 	 	  	 		  	    	  <li>
+		 	 	  	 		  	    	  	 
+		 	 	  	 		  	    	  	  <div class="backface"></div>
+		 	 	  	 		  	    	  	  <div class="face">我有一头邱海峰</div>
+		 	 	  	 		  	    	  </li>
+		 	 	  	 		  	    	  <li>	  	    	  	  
+		 	 	  	 		  	    	  	  <div class="backface"></div>
+		 	 	  	 		  	    	  	  <div class="face">我有一头邱海峰</div>
+		 	 	  	 		  	    	  </li>
+		 	 	  	 		  	    	  <li>
+		 	 	  	 		  	    	  	 
+		 	 	  	 		  	    	  	  <div class="backface"></div>
+		 	 	  	 		  	    	  	  <div class="face">我有一头邱海峰</div>
+		 	 	  	 		  	    	  </li>
+		 	 	  	 		  	    	  <li>	  	    	  	  
+		 	 	  	 		  	    	  	  <div class="backface"></div>
+		 	 	  	 		  	    	  	  <div class="face">我有一头邱海峰</div>
+		 	 	  	 		  	    	  </li>
+		 	 	  	 		  	    	  <li>
+		 	 	  	 		  	    	  	 
+		 	 	  	 		  	    	  	  <div class="backface"></div>
+		 	 	  	 		  	    	  	  <div class="face">我有一头邱海峰</div>
+		 	 	  	 		  	    	  </li>
+		 	 	  	 		  	    	  <li>	  	    	  	  
+		 	 	  	 		  	    	  	  <div class="backface"></div>
+		 	 	  	 		  	    	  	  <div class="face">我有一头邱海峰</div>
+		 	 	  	 		  	    	  </li>
+		 	 	  	 		  	    	  <li>
+		 	 	  	 		  	    	  	 
+		 	 	  	 		  	    	  	  <div class="backface"></div>
+		 	 	  	 		  	    	  	  <div class="face">我有一头邱海峰</div>
+		 	 	  	 		  	    	  </li>
+		 	 	  	 		  	    	  <li>	  	    	  	  
+		 	 	  	 		  	    	  	  <div class="backface"></div>
+		 	 	  	 		  	    	  	  <div class="face">我有一头邱海峰</div>
+		 	 	  	 		  	    	  </li>
+		 	 	  	 		  	    	  <li>
+		 	 	  	 		  	    	  	 
+		 	 	  	 		  	    	  	  <div class="backface"></div>
+		 	 	  	 		  	    	  	  <div class="face">我有一头邱海峰</div>
+		 	 	  	 		  	    	  </li>
+		 	 	  	 		  	    	  <li>	  	    	  	  
+		 	 	  	 		  	    	  	  <div class="backface"></div>
+		 	 	  	 		  	    	  	  <div class="face">我有一头邱海峰</div>
+		 	 	  	 		  	    	  </li>
+		 	 	  	 		  	    	  <li>
+		 	 	  	 		  	    	  	 
+		 	 	  	 		  	    	  	  <div class="backface"></div>
+		 	 	  	 		  	    	  	  <div class="face">我有一头邱海峰</div>
+		 	 	  	 		  	    	  </li>
+		 	 	  	 		  	    	  <li>	  	    	  	  
+		 	 	  	 		  	    	  	  <div class="backface"></div>
+		 	 	  	 		  	    	  	  <div class="face">我有一头邱海峰</div>
+		 	 	  	 		  	    	  </li>
+		 	 	  	 		  	    	
+		 	 	  	 		  	    	
+		 	 	  	 		  	    </ul>
+		 	 	  	 		  </div>
+		 	 	  	 	      <div class="plane1"></div>
+							  <div class="plane2"></div>
+							  <div class="plane3"></div>
+		 	 	  	 	</section>
+		 	 	  	 </li>
+		 	 	  	 <li>
+		 	 	  	 	<section class="works">
+		 	 	  	 		  <div class="works1 commonTitle">
+		 	 	  	 		  	 EINBLICK  <br />
+								 ERKENNTNIS <br />
+								 ERGEBNIS  <br />
+		 	 	  	 		  </div>
+		 	 	  	 		  <div class="works2">
+		 	 	  	 		  	  <ul class="list">
+		 	 	  	 		  	  	  <li>
+		 	 	  	 		  	  	  	<img src="img/worksimg1.jpg" alt="" />
+		 	 	  	 		  	  	  	<div class="mask">
+		 	 	  	 		  	  	  		<p>我有一头张晓飞,我有两天头张晓飞，我有三头张晓飞</p>
+		 	 	  	 		  	  	  		<span class="icon"></span>
+		 	 	  	 		  	  	  		 
+		 	 	  	 		  	  	  	</div>
+		 	 	  	 		  	  	  </li>
+		 	 	  	 		  	  	  <li>
+		 	 	  	 		  	  	  	<img src="img/worksimg2.jpg" alt="" />
+		 	 	  	 		  	  	  	<div class="mask">
+		 	 	  	 		  	  	  		<p>我从来都不骑</p>
+		 	 	  	 		  	  	  		<span class="icon"></span>
+		 	 	  	 		  	  	  		 
+		 	 	  	 		  	  	  	</div>
+		 	 	  	 		  	  	  </li>
+		 	 	  	 		  	  	  <li>
+		 	 	  	 		  	  	  	<img src="img/worksimg3.jpg" alt="" />
+		 	 	  	 		  	  	  	<div class="mask">
+		 	 	  	 		  	  	  		<p>突然一天心血来潮</p>
+		 	 	  	 		  	  	  		<span class="icon"></span>
+		 	 	  	 		  	  	  		 
+		 	 	  	 		  	  	  	</div>
+		 	 	  	 		  	  	  </li>
+		 	 	  	 		  	  	  <li>
+		 	 	  	 		  	  	  	<img src="img/worksimg4.jpg" alt="" />
+		 	 	  	 		  	  	  	<div class="mask">
+		 	 	  	 		  	  	  		<p>骑他去赶集</p>
+		 	 	  	 		  	  	  		<span class="icon"></span>
+		 	 	  	 		  	  	  		 
+		 	 	  	 		  	  	  	</div>
+		 	 	  	 		  	  	  </li>
+		 	 	  	 		  	  	  
+		 	 	  	 		  	  </ul>
+		 	 	  	 		  </div>
+		 	 	  	 		  <div class="robot">
+		 	 	  	 		  	 <img src="img/robot.png/" alt="" />
+		 	 	  	 		  </div>
+		 	 	  	 		  
+		 	 	  	 		  <div class="pencel1"></div>
+							  <div class="pencel2"></div>
+							  <div class="pencel3"></div>
+		 	 	  	 		
+		 	 	  	 	</section>
+		 	 	  	 </li>
+		 	 	  	 <li>
+		 	 	  	 	<section class="about">
+		 	 	  	 		  <header class="about1 commonTitle">
+		 	 	  	 		  	   <span>DIE</span> <br />
+		 	 	  	 		  	   <span>SPEZIELLE </span> <br />
+		 	 	  	 		  	   <span>VIELFALT </span> <br />
+		 	 	  	 		  </header>
+		 	 	  	 		  <div class="about2 ">
+		 	 	  	 		  	  <p class="commonText">Der bunte Medienmix ist die Faszination die uns antreibt und das, was man an uns schätzt. Von A bis Z und von vorne bis hinten nehmen wir Ihr Projekt unter unsere Fittiche und lassen es zu etwas Großartigem heranwachsen.</p>
+		 	 	  	 		  </div>
+		 	 	  	 		  <div class="about3">
+		 	 	  	 		  	   <div class="item">
+		 	 	  	 		  	   	        <span></span>
+		 	 	  	 		  	   	        <ul data-src="img/about1.jpg"></ul>
+		 	 	  	 		  	   </div>
+		 	 	  	 		  	   <div class="item">
+		 	 	  	 		  	   	        <span></span>
+		 	 	  	 		  	   	        <ul data-src="img/about3.jpg"></ul>
+		 	 	  	 		  	   </div>
+		 	 	  	 		  </div>
+		 	 	  	 		  <div class="line"></div>
+		 	 	  	 		
+		 	 	  	 	</section>
+		 	 	  	 </li>
+		 	 	  	 <li>
+		 	 	  	 	<section class="team">
+		 	 	  	 		 <header class="team1 commonTitle">
+		 	 	  	 		 	   <span>WIR SIND </span> <br />
+		 	 	  	 		 	   <span>VOXELAIR</span>  <br />
+		 	 	  	 		 </header>
+		 	 	  	 		 <div class="team2">
+		 	 	  	 		 	   <p class="commonText">Wir sind seit 2002 eine Full-Service-Werbeagentur mit Stammsitz in Heimsheim, zwischen Stuttgart und Karlsruhe.</p>
+		 	 	  	 		 	   <p class="commonText">Über 60 Jahre Erfahrung vereinen das gesamte VoxelAir-Team. Dabei hat jedes Voxel neben professionellem Allroundwissen auch sein ganz spezielles Gebiet, um selbst die individuellsten Kundenwünsche schnell und kompetent umzusetzen.</p>
+		 	 	  	 		 </div>
+		 	 	  	 		 <div class="team3">
+		 	 	  	 		 	   <ul class="list">
+		 	 	  	 		 	   	   <li></li>
+		 	 	  	 		 	   	   <li></li>
+		 	 	  	 		 	   	   <li></li>
+		 	 	  	 		 	   	   <li></li>
+		 	 	  	 		 	   	   <li></li>
+		 	 	  	 		 	   	   <li></li>
+		 	 	  	 		 	   	   <li></li>
+		 	 	  	 		 	   	   <li></li>
+		 	 	  	 		 	   </ul>
+		 	 	  	 		 	   
+		 	 	  	 		 </div>
+		 	 	  	 	</section>
+		 	 	  	 </li>
+		 	 	  </ul>	 	 	
+		 	 </section>
+		 	 <div class="fixed">
+		 	 	 <span class="active"></span>
+		 	 	 <span></span>
+		 	 	 <span></span>
+		 	 	 <span></span>
+		 	 	 <span></span>
+		 	 </div>
+		 	 
+		 	 
+		 </setcion>
+	</body>
+	<script type="text/javascript">
+		 window.onload=function(){
+		 	var content=document.querySelector("#content");
+		 	var head=document.querySelector("#head");
+		 	var headLiNodes=document.querySelectorAll("#head>.headMain>.nav>.list>li");
+		 	var upNodes=document.querySelectorAll("#head>.headMain>.nav>.list>li .up");
+		 	var arrow=document.querySelector("#head>.headMain>.arrow");
+		 	var cliNodes=document.querySelectorAll("#content>.list>li");
+		 	var contentList=document.querySelector("#content>.list");
+		 	
+		 	var hItemsNodes=document.querySelectorAll("#content>.list>li:nth-of-type(1)>.home>.home1>.item");
+		 	var hSpanNodes=document.querySelectorAll("#content>.list>li:nth-of-type(1)>.home>.home2>span");
+		 	var liHome=document.querySelector("#content>.list>li:nth-of-type(1)");
+		 	
+		 	var picItems=document.querySelectorAll("#content>.list>li:nth-of-type(4)>.about>.about3>.item>ul");
+		 	var fixSpans=document.querySelectorAll("#wrap>.fixed>span");
+		 	
+		 	var team3=document.querySelector("#content>.list>li:nth-of-type(5)>.team>.team3");
+		 	var teamLiNodes=team3.querySelectorAll(".list>li");
+		 	
+		 	var music=document.querySelector("#head>.headMain>.music");
+		 	var audio=music.querySelector("audio");
+		 	
+		 	var mask=document.querySelector("#wrap  #mask");
+		 	var up=document.querySelector("#wrap  #mask>.up");
+		 	var down=document.querySelector("#wrap  #mask>.down");
+		 	var middle=document.querySelector("#wrap  #mask>.middle");
+		 	
+		 	/*开机动画*/
+		 	startAn();
+		 	function startAn(){
+		 	var flag=0;	
+		    var arr = ['bg1.jpg','bg2.jpg','bg3.jpg','bg4.jpg','bg5.jpg','about1.jpg','about2.jpg','about3.jpg','about4.jpg','worksimg1.jpg','worksimg2.jpg','worksimg3.jpg','worksimg4.jpg','team.png','greenLine.png'];
+		 	   for(var i=0;i<arr.length;i++){
+		 	   	   var img=new Image();
+		 	   	   img.src='img/'+arr[i];
+		 	   	   img.onload=function(){
+		 	   	   	    flag++;
+		 	   	   	    middle.style.width=flag/arr.length*100+"%";	   	   	
+		 	   	   }
+		 	   }
+		 	   middle.addEventListener("transitionend",function(){
+		 	   	     // 过渡动画执行完后 开机
+		 	   	     up.style.height=0+"px";
+		 	   	     down.style.height=0+"px";
+		 	   	     middle.style.display="none";
+		 	   });
+		 	   up.addEventListener("transitionend",function(){
+		 	   	     mask.remove();
+		 	   	     // 音乐响起
+		 	   	     audio.play();
+		 	   	     // 第一屏入场  
+		 	   	     arrAn[0].inAn();
+		 	   	     // 第一屏入场后  再开启自动轮播和手动轮播的绑定
+		 	   	     homeBind();
+		 	   })
+		 	
+		 	}
+		 	
+		 	
+		 	
+		 	
+		 	/*对音频的控制*/
+		 	music.onclick=function(){
+		 		if(audio.paused){
+		 			audio.play();
+		 			this.style.background="";
+		 		}else{
+		 			audio.pause();
+		 			this.style.background="url(img/musicoff.gif) no-repeat";
+		 		}
+		 	}
+		 	
+		 	/*设置出入场动画*/
+		 	var arrAn=[{
+		 		inAn:function(){
+		 			var home1=document.querySelector("#content>.list>li:nth-of-type(1)>.home>.home1");
+		 			var home2=document.querySelector("#content>.list>li:nth-of-type(1)>.home>.home2");
+
+		 			home1.style.transform="translateY(0)";
+		 			home1.style.opacity=1;
+		 			home2.style.transform="translateY(0)";
+		 			
+		 		},
+		 		outAn:function(){
+		 			var home1=document.querySelector("#content>.list>li:nth-of-type(1)>.home>.home1");
+		 			var home2=document.querySelector("#content>.list>li:nth-of-type(1)>.home>.home2");
+
+		 			home1.style.transform="translateY(-130%)";
+		 			home1.style.opacity=0;
+		 			home2.style.transform="translateY(100px)";
+		 		}
+		 	},{
+		 		inAn:function(){
+		 			var plane1=document.querySelector("#content>.list>li:nth-of-type(2)>.course .plane1");
+		 			var plane2=document.querySelector("#content>.list>li:nth-of-type(2)>.course .plane2");
+		 			var plane3=document.querySelector("#content>.list>li:nth-of-type(2)>.course .plane3");
+		 			plane1.style.transform="translate(0,0)";
+		 			plane2.style.transform="translate(0,0)";
+		 			plane3.style.transform="translate(0,0)";
+		 		},
+		 		outAn:function(){
+		 			var plane1=document.querySelector("#content>.list>li:nth-of-type(2)>.course .plane1");
+		 			var plane2=document.querySelector("#content>.list>li:nth-of-type(2)>.course .plane2");
+		 			var plane3=document.querySelector("#content>.list>li:nth-of-type(2)>.course .plane3");
+		 			plane1.style.transform="translate(-200px,-200px)";
+		 			plane2.style.transform="translate(-200px,200px)";
+		 			plane3.style.transform="translate(200px,-200px)";			
+		 		}		
+		 	},{
+		 		 inAn:function(){		 		 	
+		 		 	var pencel1=document.querySelector("#content>.list>li:nth-of-type(3)>.works .pencel1");
+		 		 	var pencel2=document.querySelector("#content>.list>li:nth-of-type(3)>.works .pencel2");
+		 		 	var pencel3=document.querySelector("#content>.list>li:nth-of-type(3)>.works .pencel3");
+		 		 	pencel1.style.transform="translateY(0px)";
+		 		 	pencel2.style.transform="translateY(0px)";
+		 		    pencel3.style.transform="translate(0px,0px)";
+		 		 },
+		 		 outAn:function(){
+		 		 	var pencel1=document.querySelector("#content>.list>li:nth-of-type(3)>.works .pencel1");
+		 		 	var pencel2=document.querySelector("#content>.list>li:nth-of-type(3)>.works .pencel2");
+		 		 	var pencel3=document.querySelector("#content>.list>li:nth-of-type(3)>.works .pencel3");
+		 		 	pencel1.style.transform="translateY(-100px)";
+		 		 	pencel2.style.transform="translateY(80px)";
+		 		    pencel3.style.transform="translate(80px,80px)";
+		 		 }
+		 	},{
+		 		inAn:function(){
+		 			var item1=document.querySelector("#content>.list>li:nth-of-type(4)>.about>.about3>.item:nth-of-type(1)"); 
+		 			var item2=document.querySelector("#content>.list>li:nth-of-type(4)>.about>.about3>.item:nth-of-type(2)"); 
+		 			item1.style.transform="rotate(0deg)";
+		 			item2.style.transform="rotate(0deg)";
+		 		},
+		 		outAn:function(){
+		 			var item1=document.querySelector("#content>.list>li:nth-of-type(4)>.about>.about3>.item:nth-of-type(1)"); 
+		 			var item2=document.querySelector("#content>.list>li:nth-of-type(4)>.about>.about3>.item:nth-of-type(2)");
+		 			item1.style.transform="rotate(30deg)";
+		 			item2.style.transform="rotate(-30deg)";
+		 		}
+		 	},{
+		 		inAn:function(){
+		 			var team1=document.querySelector("#content>.list>li:nth-of-type(5)>.team>.team1");
+		 			var team2=document.querySelector("#content>.list>li:nth-of-type(5)>.team>.team2");
+		 			team1.style.transform="translateX(0)";
+		 			team2.style.transform="translateX(0)";	 			
+		 		},
+		 		outAn:function(){
+		 			var team1=document.querySelector("#content>.list>li:nth-of-type(5)>.team>.team1");
+		 			var team2=document.querySelector("#content>.list>li:nth-of-type(5)>.team>.team2");
+		 			team1.style.transform="translateX(-150px)";
+		 			team2.style.transform="translateX(150px)";
+		 		}
+		 		
+		 	}];
+		    // 刚开始设置其余全部是出场状态 第一屏是入场状态
+		    for(var i=0;i<arrAn.length;i++){
+		    	  arrAn[i].outAn();
+		    }
+		   
+
+		 	
+		 	
+		 	// 定义一些用来记录状态的变量
+		 	var now=0; // now用来记录index的值  表示目前处于第几屏
+		 	var preIndex=0; // 用来记录上一屏的index的值
+		 	var timer=null; // 用来标记滚动事件里面 解决快速滑动滑轮  连续滚动的问题
+		 	window.onresize=function(){
+		 		// 当产生缩放的时候 布局会乱掉 
+		 		//因为content是根据视口的大小定的宽高 凡是和视口相关的尺寸 全部重调
+		 		// list里的li 应该继续跟content的大小保持一致
+		 		contentBind();
+		 		// 因为缩放的时候 小箭头的位置以及list的偏移量不变的话   会因为缩放发生偏移
+		 		// 所以我们要对这两个数据进行修正
+		 		arrow.style.left=headLiNodes[now].offsetLeft+headLiNodes[now].offsetWidth/2-arrow.offsetWidth/2+"px";
+		 		contentList.style.top=-(now)*content.offsetHeight+"px"; 			 		
+		 	}
+		 	
+		 	
+		 	
+		 	/*给content绑定滚轮事件*/
+		 	bind();
+		 	function bind(){
+		 		// 给火狐浏览器绑定滚轮事件
+		 		if(content.addEventListener){
+		 		   content.addEventListener("DOMMouseScroll",function(ev){
+		 		   	    ev=ev || event;
+		 		   	    clearTimeout(timer);	 		   	    
+		 		   	    timer=setTimeout(function(){
+		 		   	    	fn(ev);
+		 		   	    },200);
+		 		   })
+			 	}
+		 		// 给非火狐浏览器绑定滚轮事件
+			 	content.onmousewheel=function(ev){
+			 		    ev=ev || event;
+			 		    clearTimeout(timer);	 		   	  
+		 		   	    timer=setTimeout(function(){
+		 		   	    	fn(ev);
+		 		   	    },200);		 		
+			 	};
+			 	function fn(ev){
+			 	  var dir="";
+			 	  if(ev.wheelDelta){
+			 	  	  dir=ev.wheelDelta>0?"up":"down";
+			 	  }else if(ev.detail){
+			 	  	  dir=ev.detail>0?"down":"up";
+			 	  }
+			 	  switch (dir){
+			 	  	case "up":
+			 	  	    {
+			 	  	    	// 如果现在的屏不是第一屏的话 可以向上滚动
+			 	  	    	if(now>0){		 	  	    		
+			 	  	    		preIndex= now--;
+			 	  	     	    move(now);  	    		
+			 	  	    	}		 	  	     			 	  	     	
+			 	  	    }
+			 	  		break;
+			 	  	case "down":
+			 	  	   {    
+			 	  	   	    // 如果现在的屏不是最后一屏的话 可以向下滚动
+			 	  	   	    if(now<upNodes.length-1){
+			 	  	   	    	preIndex= now++;
+			 	  	   	    	move(now);
+			 	  	   	    }
+			 	  	   }
+			 	  	   break;	
+			 	  }	 		
+			 	}		 		 		
+		 	}
+		 			 	
+		 	/*头部交互*/ 	
+		 	headBind();
+		 	function headBind(){
+		 		upNodes[0].style.width="100%";
+			 	arrow.style.left=headLiNodes[0].offsetLeft+headLiNodes[0].offsetWidth/2-arrow.offsetWidth/2+"px";
+			 	for(var i=0;i<headLiNodes.length;i++){
+			 		headLiNodes[i].index=i;
+			 		headLiNodes[i].onclick=function(){
+			 			 /*改变箭头的位置 以及nav的字的位置*/
+			 			 preIndex=now;
+			 			 move(this.index);
+			 		}		 		
+			 	}		 	
+				 	// 给小圆点绑定点击事件
+			   for(var i=0;i<fixSpans.length;i++){
+			   	   fixSpans[i].index=i;
+			   	   fixSpans[i].onclick=function(){
+			   	   	     preIndex=now;
+			   	   	     move(this.index);   	   	 
+			   	   }
+			   }
+		 	}
+		 	//  要滚动到哪一屏的逻辑
+		 	function move(index){
+			 		 for(var i=0;i<headLiNodes.length;i++){
+			 			 	upNodes[i].style.width="";
+			 		 }
+		 			 upNodes[index].style.width="100%";
+		 			 for(var i=0;i<fixSpans.length;i++){
+		 			 	     fixSpans[i].className="";
+		 			 }
+		 			 fixSpans[index].className="active";
+		 		     arrow.style.left=headLiNodes[index].offsetLeft+headLiNodes[index].offsetWidth/2-arrow.offsetWidth/2+"px";
+	                 /*改变content list的偏移量 让它移动到指定的那一屏*/
+	                 contentList.style.top=-(index)*content.offsetHeight+"px";
+	                 
+	                 //只有一屏处于入场状态  上次那一屏设置为出场状态
+	                 
+	                 arrAn[preIndex].outAn();
+	                 arrAn[index].inAn();
+	                                  
+	                 now=index;
+	         
+		    }
+		 
+		  	
+		 	/*内容区布局*/
+		 	contentBind();
+		 	function contentBind(){
+		 		content.style.width=document.documentElement.clientWidth+"px"
+			 	content.style.height=document.documentElement.clientHeight-head.offsetHeight+"px";
+			   
+			    for(var i=0;i<cliNodes.length;i++){
+			   	 cliNodes[i].style.width=document.documentElement.clientWidth+"px";
+			   	 cliNodes[i].style.height=document.documentElement.clientHeight-head.offsetHeight+"px";
+			    }	 		
+		 	}
+		 	
+		   	
+		   /*内容区功能*/
+		   
+		   /*轮播图*/
+		   var hIndex=0;
+		   var oldIndex=0;
+		   var timer3D=null;
+		   
+		   function homeBind(){
+		   	    for(var i=0;i<hSpanNodes.length;i++){
+		   	    	hSpanNodes[i].index=i;
+		   	    	hSpanNodes[i].onclick=function(){
+		   	    		 /*// 进来第一步  清除自动轮播
+		   	    		 clearInterval(timer3D);*/
+		   	    		 for(i=0;i<hSpanNodes.length;i++){
+		   	    		 	 hSpanNodes[i].classList.remove("active");
+		   	    		 }
+		   	    		 hSpanNodes[this.index].classList.add("active");
+		   	    		  // 从左向右 leftHide 和rightShow
+		   	    		 if(this.index>hIndex){
+		   	    		 	
+		   	    		 	 hItemsNodes[hIndex].classList.add("leftHide");
+		   	    		 	 hItemsNodes[hIndex].classList.remove("leftShow");
+		   	    		 	 hItemsNodes[hIndex].classList.remove("rightHide");
+		   	    		 	 hItemsNodes[hIndex].classList.remove("rightShow");
+		   	    		 	 
+		   	    		 	 hItemsNodes[this.index].classList.add("rightShow");
+		   	    		 	 hItemsNodes[this.index].classList.remove("rightHide");
+		   	    		 	 hItemsNodes[this.index].classList.remove("leftShow");
+		   	    		 	 hItemsNodes[this.index].classList.remove("leftHide"); 	    		 	
+		   	    		 }
+		   	    		 
+		   	    		 // 从右向左 rightHide 和leftShow
+		   	    		 if(this.index<hIndex){
+		   	    		 	
+		   	    		 	 hItemsNodes[hIndex].classList.add("rightHide");
+		   	    		 	 hItemsNodes[hIndex].classList.remove("rightShow");
+		   	    		 	 hItemsNodes[hIndex].classList.remove("leftHide");
+		   	    		 	 hItemsNodes[hIndex].classList.remove("leftShow");
+		   	    		 	 
+		   	    		 	 hItemsNodes[this.index].classList.add("leftShow");
+		   	    		 	 hItemsNodes[this.index].classList.remove("leftHide");
+		   	    		 	 hItemsNodes[this.index].classList.remove("rightShow");
+		   	    		 	 hItemsNodes[this.index].classList.remove("rightHide"); 	    		 	
+		   	    		 }	    		 	   	    		 
+		   	    		 // 更新hIndex
+		   	    		 hIndex=this.index;
+		   	    		 
+		   	    		/* // 手动轮播逻辑结束后  再次开启自动轮播  不过我们的功能是 鼠标放到home的时候 停止自动轮播   鼠标离开home的时候  开启自动轮播
+		   	    		 autoHome();*/
+		   	    	}
+		   	    }
+		   	    
+		   	    autoHome();
+		   	    function autoHome(){
+		   	    	 timer3D= setInterval(function(){
+		   	    	 	 oldIndex=hIndex++;   	 	 
+		   	    	 	 hIndex=hIndex%hItemsNodes.length;
+		   	    	 	 
+		   	    	 	 hItemsNodes[oldIndex].classList.add("leftHide");
+		   	    		 hItemsNodes[oldIndex].classList.remove("leftShow");
+		   	    		 hItemsNodes[oldIndex].classList.remove("rightHide");
+		   	    		 hItemsNodes[oldIndex].classList.remove("rightShow");
+		   	    		 	 
+		   	    		 hItemsNodes[hIndex].classList.add("rightShow");
+		   	    		 hItemsNodes[hIndex].classList.remove("rightHide");
+		   	    		 hItemsNodes[hIndex].classList.remove("leftShow");
+		   	    		 hItemsNodes[hIndex].classList.remove("leftHide");
+		   	    		 
+		   	    	 	 hSpanNodes[oldIndex].classList.remove("active");
+		   	    	 	 hSpanNodes[hIndex].classList.add("active");
+		   	    	 	 
+		   	    		
+		   	    	 },2000);
+		   	    }
+		   	    
+		   	    // 鼠标放上的时候 关闭自动轮播 鼠标离开时 开启自动轮播
+		   	    liHome.onmouseenter=function(){
+		   	    	clearInterval(timer3D);
+		   	    }
+		   	    liHome.onmouseleave=function(){
+		   	    	autoHome();
+		   	    }	   	
+		   }
+		    
+		   /* 图片炸裂效果  */ 
+		   picBom(); 
+		   function picBom(){
+		   	   for(var i=0;i<picItems.length;i++){		   	   	    
+		   	   	   	   createLi(picItems[i]);	   	   	   	 
+		   	   }
+		   	
+		      function createLi(picUl){
+		      	    var w=picUl.clientWidth/2;
+		      	    var h=picUl.clientHeight/2;
+		      	    var src=picUl.dataset.src; 
+		 
+		      	    for(var i=0;i<4;i++){
+		      	    	var li=document.createElement("li");
+		      	    	var img=document.createElement("img");
+		      	    	img.src=src;
+		      	    	img.style.position="absolute";		      	    
+		      	    	li.style.width=w+"px";
+		      	    	li.style.height=h+"px";
+		      	    	li.appendChild(img);
+		      	    	picUl.appendChild(li);	
+		      	    	/*
+			      	       left:  0   top:0
+			      	       left: -w   top:0
+			      	       left:  0   top:-h
+			      	       left: -w   top:-h
+			      	     */   	      	    	
+		      	    	img.style.left= -(i%2)*w+"px";
+		      	    	img.style.top=  -h*Math.floor(i/2)+"px";
+		      	    }
+		      	    
+		      	    picUl.onmouseenter=function(){
+		      	    	 var imgNodes=this.querySelectorAll("li>img");
+		      	    	 /*
+			      	       left:  0   top:0
+			      	       left: -w   top:0
+			      	       left:  0   top:-h
+			      	       left: -w   top:-h
+			      	     */   
+		      	    	 /*
+			      	       left:  0   top:h
+			      	       left: -2w   top:0
+			      	       left:  w   top:-h
+			      	       left: -w   top:-2h
+			      	     */ 
+			      	  
+			      	     imgNodes[0].style.top=h+"px";
+			      	     imgNodes[1].style.left=-2*w+"px";			      	 		   
+			      	     imgNodes[2].style.left=w+"px";					      	
+			      	     imgNodes[3].style.top=-2*h+"px";
+    	     		      	    	
+		      	    }
+		      	    picUl.onmouseleave=function(){
+		      	    	var imgNodes=this.querySelectorAll("li>img");
+		      	    	for(var i=0;i<imgNodes.length;i++){		      	    	
+		      	    		imgNodes[i].style.left= -(i%2)*w+"px";
+		      	    	    imgNodes[i].style.top=  -h*Math.floor(i/2)+"px";
+		      	    	}
+		      	    	
+		      	    }
+		      	    
+		      }		      	      		     
+		   }		    
+		   
+		   
+		   /* 第五屏 canvas的气泡效果*/
+		  five();
+		  function five(){
+		  	 var oc=null;
+		  	 var timer1=0;
+		  	 var timer2=0;
+		  	 for(var i=0;i<teamLiNodes.length;i++){
+		  	 	 teamLiNodes[i].onmouseenter=function(){
+		  	 	 	  for(var i=0;i<teamLiNodes.length;i++){
+		  	 	 	     teamLiNodes[i].style.opacity=0.5;
+		  	 	 	  }
+		  	 	 	  this.style.opacity=1;
+		  	 	 	  
+		  	 	 	  if(!oc){
+		  	 	 	  	   	addCanvas();	  	 	 	  	   	
+		  	 	 	  }
+		  	 	 	  oc.style.left=this.offsetLeft+"px";
+		  	 	 } 	 
+		  	 }
+		  	 
+		  	 // 当移出team3时  恢复原样 透明度还原 并且删除canvas标签
+		  	 // 既可以给team加删除canvas的功能      也可以给canvas本身加删除canvas的功能
+		  	 team3.onmouseleave=function(){
+		  	 	  for(var i=0;i<teamLiNodes.length;i++){
+		  	 	  	  teamLiNodes[i].style.opacity="";
+		  	 	  }
+		  	 	  canvasRemove();
+		  	 	    	 	 
+		  	 }
+		  	 
+		  	 
+		  	 function addCanvas(){
+  	 	           oc=document.createElement("canvas");
+  	 	 	  	   oc.width=teamLiNodes[0].offsetWidth;
+  	 	 	  	   oc.height=teamLiNodes[0].offsetHeight*2/3;
+  	 	 	  	   oc.style.position="absolute";
+  	 	 	  	   // 生成canvas的同时  设置好气泡效果
+  	 	 	  	   qiPao();
+  	 	 	  	   
+  	 	 	  	  /* oc.onmouseleave=function(){
+  	 	 	  	   	   canvasRemove();
+  	 	 	  	   }*/
+  	 	 	  	   team3.appendChild(oc);	 	 	  	   
+		  	 }
+		  	 function canvasRemove(){
+			  	   oc.remove();
+			  	   oc=null;
+			  	   clearInterval(timer1);
+			  	   clearInterval(timer2);
+		  	 }
+		  	 function qiPao(){
+				  	if(oc.getContext){
+					var ctx=oc.getContext("2d");			
+					timer1=setInterval(function(){
+						ctx.clearRect(0,0,oc.width,oc.height);
+				        // 进行动画处理
+					    for(var i=0;i<arr.length;i++){
+					    	arr[i].deg+=11;
+					    	arr[i].x=arr[i].startX+Math.sin((arr[i].deg*Math.PI/180))*arr[i].step/2;
+					    	arr[i].y=arr[i].startY-(arr[i].deg*Math.PI/180)*arr[i].step/3;
+					    	if(arr[i].y<=30){
+					    		arr.splice(i,1);
+					    		i--;
+					    	}				    	
+					    }		    
+					    // 绘制
+					    for(var i=0;i<arr.length;i++){
+					    	ctx.save();
+					    	ctx.fillStyle="rgba("+arr[i].red+","+arr[i].green+","+arr[i].blue+","+arr[i].a+")";
+							ctx.beginPath();
+							ctx.arc(arr[i].x,arr[i].y,arr[i].r,0,360*Math.PI/180);
+							ctx.fill();
+							ctx.restore();		    	
+					    }
+						
+					},1000/60);		
+					var arr=[];
+					timer2=setInterval(function(){
+						//  新生成的圆的信息
+					    var x=Math.random()*oc.width;
+						var r=Math.random()*6+3;
+						var y=oc.height-r;
+						var red=Math.round(Math.random()*255); 
+						var green=Math.round(Math.random()*255);
+						var blue=Math.round(Math.random()*255);
+						var a=1;
+						
+						var startX=x;
+						var startY=y;
+						var deg=0;
+						var step=Math.round(Math.random()*30)+50 ;
+						var round={
+							x:x,
+							y:y,
+							r:r,
+							red:red,
+							green:green,
+							blue:blue,
+							a:a,
+							startX:startX,
+							startY:startY,
+							deg:deg,
+							step:step
+						};
+						arr.push(round);
+						
+					},50);						
+				  }		  	 	
+		  	}		  	 	
+		  }
+		   		   	   
+		   
+		 
+		 	
+		 }
+	</script>
+</html>
